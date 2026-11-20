@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact form with client-side validation.">
+  <title>Contact | Redynox Web Development Internship</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Intern Portfolio</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="lead">Send a message using the form below. It is checked in your browser before it is accepted.</p>
+      </div>
+    </section>
+    <section class="block">
+      <div class="container form-wrap">
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+            <p class="error-msg" id="name-error" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+            <p class="error-msg" id="email-error" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" aria-describedby="message-error"></textarea>
+            <p class="hint">At least 10 characters.</p>
+            <p class="error-msg" id="message-error" role="alert"></p>
+          </div>
+          <button class="btn" type="submit">Send message</button>
+          <div class="result" id="result" hidden aria-live="polite"></div>
+        </form>
+        <aside>
+          <h2>How it works</h2>
+          <p>The script checks each field, stops the page from reloading, and logs the data to the browser console (press F12 and open Console).</p>
+          <p class="hint">No server receives this data. See the README for how a real server would.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built for the Redynox Web Development Internship &ndash; Tasks 1 and 2.</p>
+    </div>
+  </footer>
+  <script src="js/form.js"></script>
+</body>
+</html>
